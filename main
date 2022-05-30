@@ -36,6 +36,8 @@ func BuildMerkleTree(LeafNode []string,LeafNodeNumber int) [15]string {
 	}
     return MerkleTree
 }
+
+
 func APIgetmerklebranch(HashInput string) []string {
     var MerkleBrach[] string
     var index int
@@ -62,6 +64,8 @@ func APIgetmerklebranch(HashInput string) []string {
     }
     return MerkleBrach
 }
+
+
 func main() {
     MerkleTree=BuildMerkleTree(LeafNode,LeafNodeNumber)
     fmt.Print("叶子节点值：")
