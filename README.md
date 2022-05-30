@@ -1,1 +1,3 @@
-# -
+根据要求 用golang实现了一颗包含8个叶子节点的默克尔树，叶子节点的值分别为string类型的1，2，3，4，5，6，7，8
+BuildMerkleTree函数根据叶子节点建立Merkel树
+APIgetmerklebranch为获取默克尔证明路径的接口，我在main函数中打印了值为1的节点的默克尔证明路径，您也可以自己测试（注意输入必须为string类型的1-8）。
