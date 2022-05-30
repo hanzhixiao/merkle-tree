@@ -7,6 +7,7 @@ import (
 
 var LeafNodeNumber int=8
 var LeafNode=[] string {"1","2","3","4","5","6","7","8"}
+//用数组代表Merkle树（没用结构体），数组最后一个值为root
 var MerkleTree[15]string
 
 func BuildMerkleTree(LeafNode []string,LeafNodeNumber int) [15]string {
@@ -38,6 +39,8 @@ func BuildMerkleTree(LeafNode []string,LeafNodeNumber int) [15]string {
 func APIgetmerklebranch(HashInput string) []string {
     var MerkleBrach[] string
     var index int
+    //可以把叶子节点排序，用二分查找
+    //这里只用了普通方式
     for index=0;index<len(MerkleTree);index++{
         if MerkleTree[index]==HashInput{
             break;
